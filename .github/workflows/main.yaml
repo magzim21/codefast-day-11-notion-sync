@@ -102,7 +102,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    if: needs.git-tag-release.outputs.should-run-build == 'True'
+    if: needs.next-version.outputs.should-run-build == 'True'
     needs: next-version
     steps:
       - uses: actions/checkout@v4
